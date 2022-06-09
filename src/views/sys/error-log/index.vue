@@ -18,7 +18,7 @@
       </template>
       <template #action="{ record }">
         <TableAction
-                :actions="[
+          :actions="[
             { label: t('sys.errorLog.tableActionDesc'), onClick: handleDetail.bind(null, record) },
           ]"
         />
@@ -58,15 +58,15 @@
   const [registerModal, { openModal }] = useModal();
 
   watch(
-          () => errorLogStore.getErrorLogInfoList,
-          (list) => {
-            nextTick(() => {
-              setTableData(cloneDeep(list));
-            });
-          },
-          {
-            immediate: true,
-          }
+    () => errorLogStore.getErrorLogInfoList,
+    (list) => {
+      nextTick(() => {
+        setTableData(cloneDeep(list));
+      });
+    },
+    {
+      immediate: true,
+    },
   );
   const { createMessage } = useMessage();
   if (import.meta.env.DEV) {

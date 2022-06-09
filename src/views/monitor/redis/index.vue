@@ -1,19 +1,19 @@
 <template>
-    <div class="p-4">
-        <a-card>
-            <!-- Redis 信息实时监控 -->
-            <a-row :gutter="8">
-                <a-col :sm="24" :xl="12">
-                    <div ref="chartRef" style="width:100%;height: 300px"></div>
-                </a-col>
-                <a-col :sm="24" :xl="12">
-                    <div ref="chartRef2" style="width:100%;height: 300px"></div>
-                </a-col>
-            </a-row>
-        </a-card>
+  <div class="p-4">
+    <a-card>
+      <!-- Redis 信息实时监控 -->
+      <a-row :gutter="8">
+        <a-col :sm="24" :xl="12">
+          <div ref="chartRef" style="width: 100%; height: 300px"></div>
+        </a-col>
+        <a-col :sm="24" :xl="12">
+          <div ref="chartRef2" style="width: 100%; height: 300px"></div>
+        </a-col>
+      </a-row>
+    </a-card>
 
-        <BasicTable @register="registerTable" :api="getInfo"></BasicTable>
-    </div>
+    <BasicTable @register="registerTable" :api="getInfo"></BasicTable>
+  </div>
 </template>
 <script lang="ts" name="monitor-redis" setup>
   import { onMounted, ref, reactive, Ref } from 'vue';
@@ -28,7 +28,9 @@
   const chartRef = ref<HTMLDivElement | null>(null);
   const chartRef2 = ref<HTMLDivElement | null>(null);
   const { setOptions, echarts } = useECharts(chartRef as Ref<HTMLDivElement>);
-  const { setOptions: setOptions2, echarts: echarts2 } = useECharts(chartRef2 as Ref<HTMLDivElement>);
+  const { setOptions: setOptions2, echarts: echarts2 } = useECharts(
+    chartRef2 as Ref<HTMLDivElement>,
+  );
   const loading = ref(false);
   let timer = null;
   const { createMessage } = useMessage();
@@ -54,7 +56,7 @@
         lineStyle: {
           color: '#dc143c',
           width: 10,
-          type: 'solid'
+          type: 'solid',
         },
       },
     ],
@@ -81,7 +83,7 @@
         lineStyle: {
           color: '#1890ff',
           width: 10,
-          type: 'solid'
+          type: 'solid',
         },
       },
     ],
@@ -96,8 +98,9 @@
 
   // 获取一组数据中最大和最小的值
   function getMaxAndMin(dataSource, field) {
-    let maxValue = null, minValue = null;
-    dataSource.forEach(item => {
+    let maxValue = null,
+      minValue = null;
+    dataSource.forEach((item) => {
       let value = Number.parseInt(item[field]);
       // max
       if (maxValue == null) {
@@ -119,7 +122,6 @@
     getInfo().then((res) => {
       dataSource.value = res.result;
     });
-
   }
 
   function initCharts() {
@@ -142,39 +144,41 @@
   }
 
   function loadData() {
-    getRedisInfo().then((res) => {
-      let time = moment().format('hh:mm:ss');
-      let [{ dbSize: currentSize }, memoryInfo] = res;
-      let currentMemory = memoryInfo.used_memory / 1000;
-      // push 数据
-      key.xAxis.data.push(time);
-      key.series[0].data.push(currentSize);
-      memory.xAxis.data.push(time);
-      memory.series[0].data.push(currentMemory);
-      // 最大长度为6
-      if (key.series[0].data.length > 6) {
-        key.xAxis.data.splice(0, 1);
-        key.series[0].data.splice(0, 1);
-        memory.xAxis.data.splice(0, 1);
-        memory.series[0].data.splice(0, 1);
-      }
-      setOptions(memory, false);
-      setOptions2(key, false);
+    getRedisInfo()
+      .then((res) => {
+        let time = moment().format('hh:mm:ss');
+        let [{ dbSize: currentSize }, memoryInfo] = res;
+        let currentMemory = memoryInfo.used_memory / 1000;
+        // push 数据
+        key.xAxis.data.push(time);
+        key.series[0].data.push(currentSize);
+        memory.xAxis.data.push(time);
+        memory.series[0].data.push(currentMemory);
+        // 最大长度为6
+        if (key.series[0].data.length > 6) {
+          key.xAxis.data.splice(0, 1);
+          key.series[0].data.splice(0, 1);
+          memory.xAxis.data.splice(0, 1);
+          memory.series[0].data.splice(0, 1);
+        }
+        setOptions(memory, false);
+        setOptions2(key, false);
 
-      // 计算 Key 最大最小值
-      //let keyPole = getMaxAndMin(key.dataSource, 'y');
-      //key.max = Math.floor(keyPole[0]) + 10;
-      //key.min = Math.floor(keyPole[1]) - 10;
-      //if (key.min < 0) this.key.min = 0;
+        // 计算 Key 最大最小值
+        //let keyPole = getMaxAndMin(key.dataSource, 'y');
+        //key.max = Math.floor(keyPole[0]) + 10;
+        //key.min = Math.floor(keyPole[1]) - 10;
+        //if (key.min < 0) this.key.min = 0;
 
-      // 计算 Memory 最大最小值
-      //let memoryPole = getMaxAndMin(memory.dataSource, 'y');
-      //memory.max = Math.floor(memoryPole[0]) + 100;
-      //memory.min = Math.floor(memoryPole[1]) - 100;
-      //if (memory.min < 0) memory.min = 0;
-    }).catch((e) => {
-      //closeTimer()
-    });
+        // 计算 Memory 最大最小值
+        //let memoryPole = getMaxAndMin(memory.dataSource, 'y');
+        //memory.max = Math.floor(memoryPole[0]) + 100;
+        //memory.min = Math.floor(memoryPole[1]) - 100;
+        //if (memory.min < 0) memory.min = 0;
+      })
+      .catch((e) => {
+        //closeTimer()
+      });
   }
 
   onMounted(() => {
@@ -184,6 +188,4 @@
       loadData();
     }, 1000);
   });
-
-
 </script>

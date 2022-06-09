@@ -1,10 +1,10 @@
 <template>
   <div class="h-full">
     <CodeMirrorEditor
-            :value="getValue"
-            @change="handleValueChange"
-            :mode="mode"
-            :readonly="readonly"
+      :value="getValue"
+      @change="handleValueChange"
+      :mode="mode"
+      :readonly="readonly"
     />
   </div>
 </template>

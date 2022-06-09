@@ -32,15 +32,15 @@
   const appStore = useAppStore();
 
   watch(
-          () => props.value,
-          async (value) => {
-            await nextTick();
-            const oldValue = editor?.getValue();
-            if (value !== oldValue) {
-              editor?.setValue(value ? value : '');
-            }
-          },
-          { flush: 'post' }
+    () => props.value,
+    async (value) => {
+      await nextTick();
+      const oldValue = editor?.getValue();
+      if (value !== oldValue) {
+        editor?.setValue(value ? value : '');
+      }
+    },
+    { flush: 'post' },
   );
 
   watchEffect(() => {
@@ -48,19 +48,19 @@
   });
 
   watch(
-          () => appStore.getDarkMode,
-          async () => {
-            setTheme();
-          },
-          {
-            immediate: true,
-          }
+    () => appStore.getDarkMode,
+    async () => {
+      setTheme();
+    },
+    {
+      immediate: true,
+    },
   );
 
   function setTheme() {
     unref(editor)?.setOption(
-            'theme',
-            appStore.getDarkMode === 'light' ? 'idea' : 'material-palenight'
+      'theme',
+      appStore.getDarkMode === 'light' ? 'idea' : 'material-palenight',
     );
   }
 

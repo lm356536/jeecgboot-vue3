@@ -82,12 +82,12 @@
       });
 
       watch(
-              () => props.openNames,
-              () => {
-                nextTick(() => {
-                  updateOpened();
-                });
-              }
+        () => props.openNames,
+        () => {
+          nextTick(() => {
+            updateOpened();
+          });
+        },
       );
 
       function updateOpened() {

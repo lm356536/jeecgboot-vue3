@@ -1,10 +1,10 @@
 <template>
   <div class="p-4">
     <BasicTable
-            @register="registerTable"
-            @edit-end="handleEditEnd"
-            @edit-cancel="handleEditCancel"
-            :beforeEditSubmit="beforeEditSubmit"
+      @register="registerTable"
+      @edit-end="handleEditEnd"
+      @edit-cancel="handleEditCancel"
+      :beforeEditSubmit="beforeEditSubmit"
     />
   </div>
 </template>

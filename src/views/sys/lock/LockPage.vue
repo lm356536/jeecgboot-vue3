@@ -1,11 +1,11 @@
 <template>
   <div
-          :class="prefixCls"
-          class="fixed inset-0 flex h-screen w-screen bg-black items-center justify-center"
+    :class="prefixCls"
+    class="fixed inset-0 flex h-screen w-screen bg-black items-center justify-center"
   >
     <div
-            :class="`${prefixCls}__unlock`"
-            class="
+      :class="`${prefixCls}__unlock`"
+      class="
         absolute
         top-0
         left-1/2
@@ -22,8 +22,8 @@
         transform
         translate-x-1/2
       "
-            @click="handleShowForm(false)"
-            v-show="showDate"
+      @click="handleShowForm(false)"
+      v-show="showDate"
     >
       <LockOutlined />
       <span>{{ t('sys.lock.unlock') }}</span>
@@ -50,29 +50,29 @@
             </p>
           </div>
           <InputPassword
-                  :placeholder="t('sys.lock.placeholder')"
-                  class="enter-x"
-                  v-model:value="password"
+            :placeholder="t('sys.lock.placeholder')"
+            class="enter-x"
+            v-model:value="password"
           />
           <span :class="`${prefixCls}-entry__err-msg enter-x`" v-if="errMsg">
             {{ t('sys.lock.alert') }}
           </span>
           <div :class="`${prefixCls}-entry__footer enter-x`">
             <a-button
-                    type="link"
-                    size="small"
-                    class="mt-2 mr-2 enter-x"
-                    :disabled="loading"
-                    @click="handleShowForm(true)"
+              type="link"
+              size="small"
+              class="mt-2 mr-2 enter-x"
+              :disabled="loading"
+              @click="handleShowForm(true)"
             >
               {{ t('common.back') }}
             </a-button>
             <a-button
-                    type="link"
-                    size="small"
-                    class="mt-2 mr-2 enter-x"
-                    :disabled="loading"
-                    @click="goLogin"
+              type="link"
+              size="small"
+              class="mt-2 mr-2 enter-x"
+              :disabled="loading"
+              @click="goLogin"
             >
               {{ t('sys.lock.backToLogin') }}
             </a-button>

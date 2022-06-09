@@ -34,7 +34,7 @@
         () => lines.value,
         () => {
           redoModalHeight();
-        }
+        },
       );
 
       function handleShow(visible: boolean) {

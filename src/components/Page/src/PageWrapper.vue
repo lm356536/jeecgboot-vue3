@@ -1,11 +1,11 @@
 <template>
   <div :class="getClass" ref="wrapperRef">
     <PageHeader
-            :ghost="ghost"
-            :title="title"
-            v-bind="omit($attrs, 'class')"
-            ref="headerRef"
-            v-if="content || $slots.headerContent || title || getHeaderSlots.length"
+      :ghost="ghost"
+      :title="title"
+      v-bind="omit($attrs, 'class')"
+      ref="headerRef"
+      v-if="content || $slots.headerContent || title || getHeaderSlots.length"
     >
       <template #default>
         <template v-if="content">
@@ -71,8 +71,8 @@
       const { prefixCls } = useDesign('page-wrapper');
 
       provide(
-              PageWrapperFixedHeightKey,
-              computed(() => props.fixedHeight),
+        PageWrapperFixedHeightKey,
+        computed(() => props.fixedHeight),
       );
 
       const getIsContentFullHeight = computed(() => {
@@ -81,11 +81,11 @@
 
       const getUpwardSpace = computed(() => props.upwardSpace);
       const { redoHeight, setCompensation, contentHeight } = useContentHeight(
-              getIsContentFullHeight,
-              wrapperRef,
-              [headerRef, footerRef],
-              [contentRef],
-              getUpwardSpace,
+        getIsContentFullHeight,
+        wrapperRef,
+        [headerRef, footerRef],
+        [contentRef],
+        getUpwardSpace,
       );
       setCompensation({ useLayoutFooter: true, elements: [footerRef] });
 
@@ -131,14 +131,14 @@
       });
 
       watch(
-              () => [getShowFooter.value],
-              () => {
-                redoHeight();
-              },
-              {
-                flush: 'post',
-                immediate: true,
-              },
+        () => [getShowFooter.value],
+        () => {
+          redoHeight();
+        },
+        {
+          flush: 'post',
+          immediate: true,
+        },
       );
 
       return {

@@ -32,7 +32,7 @@ import {
   menuTypeList,
   mixSidebarTriggerOptions,
   tabsThemeOptions,
-} from './enum'
+} from './enum';
 
 import {
   HEADER_PRESET_BG_COLOR_LIST,
@@ -90,7 +90,8 @@ export default defineComponent({
       getShowSearch,
     } = useHeaderSetting();
 
-    const { getShowMultipleTab, getShowQuick, getShowRedo, getShowFold, getTabsTheme } = useMultipleTabSetting()
+    const { getShowMultipleTab, getShowQuick, getShowRedo, getShowFold, getTabsTheme } =
+      useMultipleTabSetting();
 
     const getShowMenuRef = computed(() => {
       return unref(getShowMenu) && !unref(getIsHorizontal);
@@ -183,7 +184,6 @@ export default defineComponent({
           {/*  def={unref(getCollapsed)}*/}
           {/*  disabled={!unref(getShowMenuRef)}*/}
           {/*/>*/}
-
 
           {/*<SwitchItem*/}
           {/*  title={t('layout.setting.menuSearch')}*/}

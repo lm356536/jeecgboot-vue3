@@ -16,10 +16,20 @@
       <JAreaLinkage v-model:value="model[field]" :showArea="true" :showAll="false" />
     </template>
     <template #jAreaLinkage1="{ model, field }">
-      <JAreaLinkage :disabled="isDisabledAuth(['demo.dbarray'])" v-model:value="model[field]" :showArea="true" :showAll="false" />
+      <JAreaLinkage
+        :disabled="isDisabledAuth(['demo.dbarray'])"
+        v-model:value="model[field]"
+        :showArea="true"
+        :showAll="false"
+      />
     </template>
     <template #JPopup="{ model, field }">
-      <JPopup v-model:value="model[field]" :formElRef="formElRef" code="report_user" :fieldConfig="[{ source: 'username', target: 'pop1' }]" />
+      <JPopup
+        v-model:value="model[field]"
+        :formElRef="formElRef"
+        code="report_user"
+        :fieldConfig="[{ source: 'username', target: 'pop1' }]"
+      />
     </template>
     <template #JAreaSelect="{ model, field }">
       <JAreaSelect v-model:value="model[field]" />
@@ -37,7 +47,17 @@
 </template>
 <script lang="ts">
   import { computed, defineComponent, unref, ref } from 'vue';
-  import { BasicForm, ApiSelect, JAreaLinkage, JPopup, JAreaSelect, FormActionType, JCheckbox, JInput, JEllipsis } from '/@/components/Form';
+  import {
+    BasicForm,
+    ApiSelect,
+    JAreaLinkage,
+    JPopup,
+    JAreaSelect,
+    FormActionType,
+    JCheckbox,
+    JInput,
+    JEllipsis,
+  } from '/@/components/Form';
   import { useMessage } from '/@/hooks/web/useMessage';
   import { optionsListApi } from '/@/api/demo/select';
   import { useDebounceFn } from '@vueuse/core';

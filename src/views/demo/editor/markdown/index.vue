@@ -4,10 +4,10 @@
       <a-button @click="toggleTheme" class="mb-2" type="primary"> 黑暗主题 </a-button>
       <a-button @click="clearValue" class="mb-2" type="default"> 清空内容 </a-button>
       <MarkDown
-              v-model:value="value"
-              @change="handleChange"
-              ref="markDownRef"
-              placeholder="这是占位文本"
+        v-model:value="value"
+        @change="handleChange"
+        ref="markDownRef"
+        placeholder="这是占位文本"
       />
     </div>
     <div class="mt-2">

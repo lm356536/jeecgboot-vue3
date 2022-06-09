@@ -1,9 +1,9 @@
 <template>
   <Card
-          :tab-list="tabListTitle"
-          v-bind="$attrs"
-          :active-tab-key="activeKey"
-          @tabChange="onTabChange"
+    :tab-list="tabListTitle"
+    v-bind="$attrs"
+    :active-tab-key="activeKey"
+    @tabChange="onTabChange"
   >
     <p v-if="activeKey === 'tab1'">
       <VisitAnalysis />

@@ -31,11 +31,11 @@
   import { useMessage } from '/@/hooks/web/useMessage';
 
   import headerImg from '/@/assets/images/header.jpg';
-  import {defHttp} from '/@/utils/http/axios';
+  import { defHttp } from '/@/utils/http/axios';
   import { baseSetschemas } from './data';
   import { useUserStore } from '/@/store/modules/user';
   import { uploadImg } from '/@/api/sys/upload';
-  import {getFileAccessHttpUrl} from '/@/utils/common/compUtils'
+  import { getFileAccessHttpUrl } from '/@/utils/common/compUtils';
 
   export default defineComponent({
     components: {
@@ -50,7 +50,7 @@
       const { createMessage } = useMessage();
       const userStore = useUserStore();
 
-      const [register, { setFieldsValue,validate }] = useForm({
+      const [register, { setFieldsValue, validate }] = useForm({
         labelWidth: 120,
         schemas: baseSetschemas,
         showActionButtonGroup: false,
@@ -67,28 +67,28 @@
         return getFileAccessHttpUrl(avatar) || headerImg;
       });
 
-      function updateAvatar(src: string, data:string) {
-        console.log("data====》",data)
+      function updateAvatar(src: string, data: string) {
+        console.log('data====》', data);
         const userinfo = userStore.getUserInfo;
         userinfo.avatar = data;
         userStore.setUserInfo(userinfo);
       }
       /**
-       *更新基本信息 
+       *更新基本信息
        * */
       async function handleSubmit() {
-          try {
-              let values = await validate();
-              console.log("values",values);
-              //提交表单
-              defHttp.post({url: '/sys/user/appEdit', params:values});
-              const userinfo = userStore.getUserInfo;
-              Object.assign(userinfo,values);
-              userStore.setUserInfo(userinfo);
-              createMessage.success("更新成功")
-          } catch(e) {
-              console.log("e",e)
-          }
+        try {
+          let values = await validate();
+          console.log('values', values);
+          //提交表单
+          defHttp.post({ url: '/sys/user/appEdit', params: values });
+          const userinfo = userStore.getUserInfo;
+          Object.assign(userinfo, values);
+          userStore.setUserInfo(userinfo);
+          createMessage.success('更新成功');
+        } catch (e) {
+          console.log('e', e);
+        }
       }
 
       return {
@@ -96,7 +96,7 @@
         register,
         uploadImg,
         updateAvatar,
-        handleSubmit
+        handleSubmit,
       };
     },
   });

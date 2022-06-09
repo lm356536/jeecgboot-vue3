@@ -2,22 +2,39 @@
   <a-col v-bind="actionColOpt" v-if="showActionButtonGroup">
     <div style="width: 100%" :style="{ textAlign: actionColOpt.style.textAlign }">
       <FormItem>
-       <!-- update-begin-author:zyf   Date:20211213  for：调换按钮前后位置-->
-        <slot name="submitBefore"></slot>  
-        <Button type="primary" class="mr-2" v-bind="getSubmitBtnOptions" @click="submitAction" v-if="showSubmitButton">
-            <Icon icon="ant-design:search-outlined"></Icon>
+        <!-- update-begin-author:zyf   Date:20211213  for：调换按钮前后位置-->
+        <slot name="submitBefore"></slot>
+        <Button
+          type="primary"
+          class="mr-2"
+          v-bind="getSubmitBtnOptions"
+          @click="submitAction"
+          v-if="showSubmitButton"
+        >
+          <Icon icon="ant-design:search-outlined"></Icon>
           {{ getSubmitBtnOptions.text }}
         </Button>
 
         <slot name="resetBefore"></slot>
-        <Button type="default" class="mr-2" v-bind="getResetBtnOptions" @click="resetAction" v-if="showResetButton">
+        <Button
+          type="default"
+          class="mr-2"
+          v-bind="getResetBtnOptions"
+          @click="resetAction"
+          v-if="showResetButton"
+        >
           <Icon icon="ic:baseline-restart-alt"></Icon>
           {{ getResetBtnOptions.text }}
         </Button>
-       <!-- update-end-author:zyf    Date:20211213  for：调换按钮前后位置-->
+        <!-- update-end-author:zyf    Date:20211213  for：调换按钮前后位置-->
 
         <slot name="advanceBefore"></slot>
-        <Button type="link" size="small" @click="toggleAdvanced" v-if="showAdvancedButton && !hideAdvanceBtn">
+        <Button
+          type="link"
+          size="small"
+          @click="toggleAdvanced"
+          v-if="showAdvancedButton && !hideAdvanceBtn"
+        >
           {{ isAdvanced ? t('component.form.putAway') : t('component.form.unfold') }}
           <BasicArrow class="ml-1" :expand="!isAdvanced" up />
         </Button>
@@ -92,7 +109,7 @@
           {
             text: t('common.resetText'),
           },
-          props.resetButtonOptions
+          props.resetButtonOptions,
         );
       });
 
@@ -101,7 +118,7 @@
           {
             text: t('common.queryText'),
           },
-          props.submitButtonOptions
+          props.submitButtonOptions,
         );
       });
 

@@ -66,7 +66,7 @@ function createConfirm(options: ModalOptionsEx): ReturnType<ModalFunc> {
     ...options,
     content: renderContent(options),
   };
-  return Modal.confirm(opt)
+  return Modal.confirm(opt);
 }
 
 const getBaseOptions = () => {

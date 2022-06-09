@@ -1,35 +1,46 @@
 <template>
-    <div class="clearfix">
-        <a-upload
-                :listType="listType"
-                :multiple="multiple"
-                :action="uploadUrl"
-                :headers="headers"
-                :data="{biz:bizPath}"
-                v-model:fileList="uploadFileList"
-                :beforeUpload="beforeUpload"
-                :disabled="disabled"
-                @change="handleChange"
-                @preview="handlePreview">
-            <div v-if="uploadVisible">
-                <div v-if="listType=='picture-card'">
-                    <LoadingOutlined v-if="loading"/>
-                    <UploadOutlined v-else/>
-                    <div class="ant-upload-text">{{ text }}</div>
-                </div>
-                <a-button v-if="listType=='picture'">
-                    <UploadOutlined></UploadOutlined>
-                    {{ text }}
-                </a-button>
-            </div>
-        </a-upload>
-        <a-modal :visible="previewVisible" :footer="null" @cancel="handleCancel()">
-            <img alt="example" style="width: 100%" :src="previewImage"/>
-        </a-modal>
-    </div>
+  <div class="clearfix">
+    <a-upload
+      :listType="listType"
+      :multiple="multiple"
+      :action="uploadUrl"
+      :headers="headers"
+      :data="{ biz: bizPath }"
+      v-model:fileList="uploadFileList"
+      :beforeUpload="beforeUpload"
+      :disabled="disabled"
+      @change="handleChange"
+      @preview="handlePreview"
+    >
+      <div v-if="uploadVisible">
+        <div v-if="listType == 'picture-card'">
+          <LoadingOutlined v-if="loading" />
+          <UploadOutlined v-else />
+          <div class="ant-upload-text">{{ text }}</div>
+        </div>
+        <a-button v-if="listType == 'picture'">
+          <UploadOutlined></UploadOutlined>
+          {{ text }}
+        </a-button>
+      </div>
+    </a-upload>
+    <a-modal :visible="previewVisible" :footer="null" @cancel="handleCancel()">
+      <img alt="example" style="width: 100%" :src="previewImage" />
+    </a-modal>
+  </div>
 </template>
 <script lang="ts">
-  import { defineComponent, PropType, ref, reactive, watchEffect, computed, unref, watch, onMounted } from 'vue';
+  import {
+    defineComponent,
+    PropType,
+    ref,
+    reactive,
+    watchEffect,
+    computed,
+    unref,
+    watch,
+    onMounted,
+  } from 'vue';
   import { LoadingOutlined, UploadOutlined } from '@ant-design/icons-vue';
   import { useRuleFormItem } from '/@/hooks/component/useFormItem';
   import { propTypes } from '/@/utils/propTypes';
@@ -46,10 +57,7 @@
     inheritAttrs: false,
     props: {
       //绑定值
-      value: propTypes.oneOfType([
-        propTypes.string,
-        propTypes.array,
-      ]),
+      value: propTypes.oneOfType([propTypes.string, propTypes.array]),
       //按钮文本
       listType: {
         type: String,
@@ -81,7 +89,7 @@
         default: 1,
       },
     },
-    emits: ['options-change', 'change','update:value'],
+    emits: ['options-change', 'change', 'update:value'],
     setup(props, { emit, refs }) {
       const emitData = ref<any[]>([]);
       const attrs = useAttrs();
@@ -113,7 +121,6 @@
       const multiple = computed(() => {
         return props['fileMax'] > 1;
       });
-
 
       //计算是否可以继续上传
       const uploadVisible = computed(() => {
@@ -194,7 +201,7 @@
         }
         emitData.value = fileUrls.join(',');
         state.value = fileUrls.join(',');
-        emit('update:value',fileUrls.join(','))
+        emit('update:value', fileUrls.join(','));
       }
 
       /**
@@ -244,13 +251,13 @@
   });
 </script>
 <style scoped>
-    .ant-upload-select-picture-card i {
-        font-size: 32px;
-        color: #999;
-    }
+  .ant-upload-select-picture-card i {
+    font-size: 32px;
+    color: #999;
+  }
 
-    .ant-upload-select-picture-card .ant-upload-text {
-        margin-top: 8px;
-        color: #666;
-    }
+  .ant-upload-select-picture-card .ant-upload-text {
+    margin-top: 8px;
+    color: #666;
+  }
 </style>

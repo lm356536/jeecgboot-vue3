@@ -6,7 +6,13 @@
         全屏 Loading
       </a-button>
       <a-button class="my-4" type="primary" @click="openCompAbsolute"> 容器内 Loading </a-button>
-      <Loading :loading="loading" :absolute="absolute" :theme="theme" :background="background" :tip="tip"/>
+      <Loading
+        :loading="loading"
+        :absolute="absolute"
+        :theme="theme"
+        :background="background"
+        :tip="tip"
+      />
 
       <a-alert message="函数方式" />
 

@@ -4,12 +4,12 @@
 -->
 <template>
   <Dropdown
-          placement="bottomCenter"
-          :trigger="['click']"
-          :dropMenuList="localeList"
-          :selectedKeys="selectedKeys"
-          @menuEvent="handleMenuEvent"
-          overlayClassName="app-locale-picker-overlay"
+    placement="bottomCenter"
+    :trigger="['click']"
+    :dropMenuList="localeList"
+    :selectedKeys="selectedKeys"
+    @menuEvent="handleMenuEvent"
+    overlayClassName="app-locale-picker-overlay"
   >
     <span class="cursor-pointer flex items-center">
       <Icon icon="ion:language" />

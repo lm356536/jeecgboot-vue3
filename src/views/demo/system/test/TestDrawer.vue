@@ -7,9 +7,7 @@
     width="500px"
     @ok="handleSubmit"
   >
-    <BasicForm @register="registerForm">
-
-    </BasicForm>
+    <BasicForm @register="registerForm"> </BasicForm>
   </BasicDrawer>
 </template>
 <script lang="ts">

@@ -41,28 +41,28 @@
       const valueRef = ref(props.value || '');
 
       watch(
-              [() => getDarkMode.value, () => initedRef.value],
-              ([val, inited]) => {
-                if (!inited) {
-                  return;
-                }
-                const theme = val === 'dark' ? 'dark' : 'classic';
-                instance.getVditor()?.setTheme(theme);
-              },
-              {
-                immediate: true,
-                flush: 'post',
-              },
+        [() => getDarkMode.value, () => initedRef.value],
+        ([val, inited]) => {
+          if (!inited) {
+            return;
+          }
+          const theme = val === 'dark' ? 'dark' : 'classic';
+          instance.getVditor()?.setTheme(theme);
+        },
+        {
+          immediate: true,
+          flush: 'post',
+        },
       );
 
       watch(
-              () => props.value,
-              (v) => {
-                if (v !== valueRef.value) {
-                  instance.getVditor()?.setValue(v);
-                }
-                valueRef.value = v;
-              },
+        () => props.value,
+        (v) => {
+          if (v !== valueRef.value) {
+            instance.getVditor()?.setValue(v);
+          }
+          valueRef.value = v;
+        },
       );
 
       const getCurrentLang = computed((): 'zh_CN' | 'en_US' | 'ja_JP' | 'ko_KR' => {
