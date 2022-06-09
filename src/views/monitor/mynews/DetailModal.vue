@@ -12,8 +12,7 @@
       <a-card-meta
         :title="content.titile"
         :description="'发布人：' + content.sender + ' 发布时间： ' + content.sendTime"
-      >
-      </a-card-meta>
+      />
       <a-divider />
       <span v-html="content.msgContent" class="article-content"></span>
     </a-card>

@@ -4,7 +4,7 @@
     v-model:value="checkboxArray"
     :options="checkOptions"
     @change="handleChange"
-  ></a-checkbox-group>
+  />
 </template>
 
 <script lang="ts">

@@ -158,7 +158,11 @@
         //update-end-author:taoyan date:2022-4-24 for: 下拉搜索组件每次选中值会触发value的监听事件，触发此方法，但是实际不需要
         let { async, value, dict } = props;
         if (async) {
-          if (!selectedAsyncValue || !selectedAsyncValue.key || selectedAsyncValue.key !== value) {
+          if (
+            !selectedAsyncValue.value ||
+            !selectedAsyncValue.value.key ||
+            selectedAsyncValue.value.key !== value
+          ) {
             defHttp
               .get({ url: `/sys/dict/loadDictItem/${dict}`, params: { key: value } })
               .then((res) => {

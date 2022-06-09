@@ -27,7 +27,7 @@
             :pagination="false"
           >
             <template #ellipsisText="{ text }">
-              <JEllipsis :value="text" :length="textMaxLength"></JEllipsis>
+              <JEllipsis :value="text" :length="textMaxLength" />
             </template>
 
             <template #dayWarnning="{ text, record }">
@@ -67,7 +67,7 @@
             :pagination="false"
           >
             <template #ellipsisText="{ text }">
-              <JEllipsis :value="text" :length="textMaxLength"></JEllipsis>
+              <JEllipsis :value="text" :length="textMaxLength" />
             </template>
 
             <template #dayWarnning="{ text, record }">
@@ -104,7 +104,7 @@
             :pagination="false"
           >
             <template #ellipsisText="{ text }">
-              <JEllipsis :value="text" :length="textMaxLength"></JEllipsis>
+              <JEllipsis :value="text" :length="textMaxLength" />
             </template>
 
             <template #dayWarnning="{ text, record }">
@@ -137,7 +137,7 @@
             :pagination="false"
           >
             <template #ellipsisText="{ text }">
-              <JEllipsis :value="text" :length="textMaxLength"></JEllipsis>
+              <JEllipsis :value="text" :length="textMaxLength" />
             </template>
 
             <template #dayWarnning="{ text, record }">

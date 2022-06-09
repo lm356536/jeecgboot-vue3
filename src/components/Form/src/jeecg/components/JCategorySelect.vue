@@ -12,8 +12,7 @@
     :treeData="treeData"
     :multiple="multiple"
     @change="onChange"
-  >
-  </a-tree-select>
+  />
 </template>
 <script lang="ts">
   import { defineComponent, ref, unref, watch } from 'vue';

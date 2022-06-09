@@ -27,7 +27,7 @@
           v-if="ruleFlag"
           icon="ant-design:align-left-outlined"
           style="margin-left: 5px; color: red"
-        ></Icon>
+        />
       </template>
     </BasicTree>
     <!--右下角按钮-->

@@ -20,28 +20,29 @@ export const getMyNewsList = (params) => {
  * 更新用户系统消息阅读状态
  * @param params
  */
-export const editCementSend = (params,) =>{
-  return defHttp.put({url: Api.editCementSend,params});
-}
+export const editCementSend = (params) => {
+  return defHttp.put({ url: Api.editCementSend, params });
+};
 
 /**
  * 一键已读
  * @param params
  */
-export const readAllMsg = (params,handleSuccess) =>{
+export const readAllMsg = (params, handleSuccess) => {
   Modal.confirm({
     title: '确认操作',
     content: '是否全部标注已读?',
     okText: '确认',
     cancelText: '取消',
     onOk: () => {
-      return defHttp.put({ url: Api.readAllMsg, data: params }, { joinParamsToUrl: true }).then(() => {
-        handleSuccess();
-      });
+      return defHttp
+        .put({ url: Api.readAllMsg, data: params }, { joinParamsToUrl: true })
+        .then(() => {
+          handleSuccess();
+        });
     },
   });
-}
-
+};
 
 /**
  * 同步消息

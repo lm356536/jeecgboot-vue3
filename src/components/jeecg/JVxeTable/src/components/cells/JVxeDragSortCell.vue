@@ -2,8 +2,7 @@
   <div class="j-vxe-drag-box">
     <a-dropdown :trigger="['click']">
       <span
-        ><span class="drag-btn">
-          <Icon icon="mi:drag" /> </span
+        ><span class="drag-btn"> <Icon icon="mi:drag" /> </span
       ></span>
       <template #overlay>
         <a-menu>

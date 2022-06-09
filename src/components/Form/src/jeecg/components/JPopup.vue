@@ -10,7 +10,7 @@
       v-bind="attrs"
     >
       <template #prefix>
-        <Icon icon="ant-design:cluster-outlined"></Icon>
+        <Icon icon="ant-design:cluster-outlined" />
       </template>
       <template #suffix>
         <Icon
@@ -18,7 +18,7 @@
           @click="handleEmpty"
           title="清空"
           v-if="showText"
-        ></Icon>
+        />
       </template>
     </a-input>
     <!--popup弹窗-->
@@ -30,7 +30,7 @@
       :groupId="uniqGroupId"
       :param="param"
       @ok="callBack"
-    ></JPopupOnlReportModal>
+    />
   </div>
 </template>
 <script lang="ts">

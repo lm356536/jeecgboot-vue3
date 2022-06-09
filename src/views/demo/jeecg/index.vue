@@ -2,15 +2,15 @@
   <div class="p-4">
     <a-card :bordered="false" style="height: 100%">
       <a-tabs v-model:activeKey="activeKey" @change="tabChange">
-        <a-tab-pane key="JeecgComponents" tab="下拉选择组件"></a-tab-pane>
-        <a-tab-pane key="JCodeEditDemo" tab="代码编辑器" force-render></a-tab-pane>
-        <a-tab-pane key="JEditorDemo" tab="富文本&MakeDown"></a-tab-pane>
-        <a-tab-pane key="ImgDragSort" tab="图片拖拽"></a-tab-pane>
-        <a-tab-pane key="ImgTurnPage" tab="图片翻页"></a-tab-pane>
-        <a-tab-pane key="JeecgPdfView" tab="PDF预览"></a-tab-pane>
-        <a-tab-pane key="JUploadDemo" tab="文件上传"></a-tab-pane>
+        <a-tab-pane key="JeecgComponents" tab="下拉选择组件" />
+        <a-tab-pane key="JCodeEditDemo" tab="代码编辑器" force-render />
+        <a-tab-pane key="JEditorDemo" tab="富文本&MakeDown" />
+        <a-tab-pane key="ImgDragSort" tab="图片拖拽" />
+        <a-tab-pane key="ImgTurnPage" tab="图片翻页" />
+        <a-tab-pane key="JeecgPdfView" tab="PDF预览" />
+        <a-tab-pane key="JUploadDemo" tab="文件上传" />
       </a-tabs>
-      <component :is="currentComponent"></component>
+      <component :is="currentComponent" />
     </a-card>
   </div>
 </template>
@@ -24,7 +24,7 @@
   import JeecgPdfView from './JeecgPdfView.vue';
   import JUploadDemo from './JUploadDemo.vue';
   export default defineComponent({
-    name: 'comp-jeecg-basic',
+    name: 'CompJeecgBasic',
     setup() {
       const activeKey = ref('JeecgComponents');
       const currentComponent = computed(() => {

@@ -17,7 +17,7 @@
                   :queryParam="queryParam"
                   :item="item"
                   :dictOptions="dictOptions"
-                ></SearchFormItem>
+                />
               </a-col>
             </template>
             <template v-else>
@@ -27,7 +27,7 @@
                   :queryParam="queryParam"
                   :item="item"
                   :dictOptions="dictOptions"
-                ></SearchFormItem>
+                />
               </a-col>
             </template>
           </template>

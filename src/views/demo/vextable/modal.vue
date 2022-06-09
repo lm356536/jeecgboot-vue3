@@ -177,7 +177,7 @@
   import { orderCustomerList, orderTicketList } from './api';
 
   export default defineComponent({
-    name: 'tableModal',
+    name: 'TableModal',
     components: { BasicModal },
     emits: ['success', 'register'],
     setup(props, { emit }) {

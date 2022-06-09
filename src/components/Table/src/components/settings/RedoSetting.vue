@@ -15,12 +15,12 @@
 
   export default defineComponent({
     name: 'RedoSetting',
-    props: {
-      isMobile: Boolean,
-    },
     components: {
       RedoOutlined,
       Tooltip,
+    },
+    props: {
+      isMobile: Boolean,
     },
     setup(props) {
       const table = useTableContext();

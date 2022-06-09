@@ -37,8 +37,7 @@
           :pagination="table2.pagination"
           @pageChange="handleTable2PageChange"
           @selectRowChange="handleTable2SelectRowChange"
-        >
-        </JVxeTable>
+        />
       </a-col>
       <!-- 这里是孙级节点 -->
       <a-col :span="12">
@@ -52,8 +51,7 @@
           :dataSource="table3.dataSource"
           :pagination="table3.pagination"
           @pageChange="handleTable3PageChange"
-        >
-        </JVxeTable>
+        />
       </a-col>
     </a-row>
   </a-card>

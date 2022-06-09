@@ -9,9 +9,9 @@
 
   export default defineComponent({
     name: 'JMarkdownEditor',
+    components: { MarkDown },
     // 不将 attrs 的属性绑定到 html 标签上
     inheritAttrs: false,
-    components: { MarkDown },
     props: {
       value: propTypes.string.def(''),
       disabled: propTypes.bool.def(false),

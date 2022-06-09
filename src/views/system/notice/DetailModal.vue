@@ -7,7 +7,7 @@
     :showOkBtn="false"
     :height="500"
   >
-    <iframe :src="frameSrc" class="detail-iframe" />
+    <iframe :src="frameSrc" class="detail-iframe"></iframe>
   </BasicModal>
 </template>
 <script lang="ts" setup>

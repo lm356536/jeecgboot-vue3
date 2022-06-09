@@ -1,12 +1,8 @@
 <!--职务选择组件-->
 <template>
   <div>
-    <JSelectBiz @handleOpen="handleOpen" :loading="loadingEcho" v-bind="attrs"></JSelectBiz>
-    <PositionSelectModal
-      @register="regModal"
-      @getSelectResult="setValue"
-      v-bind="getBindValue"
-    ></PositionSelectModal>
+    <JSelectBiz @handleOpen="handleOpen" :loading="loadingEcho" v-bind="attrs" />
+    <PositionSelectModal @register="regModal" @getSelectResult="setValue" v-bind="getBindValue" />
   </div>
 </template>
 <script lang="ts">

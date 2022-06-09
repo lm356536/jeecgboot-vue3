@@ -2,8 +2,8 @@
   <BasicTable @register="registerTable" :searchInfo="searchInfo">
     <template #tableTitle>
       <a-tabs defaultActiveKey="1" @change="tabChange" size="small">
-        <a-tab-pane tab="登录日志" key="1"></a-tab-pane>
-        <a-tab-pane tab="操作日志" key="2"></a-tab-pane>
+        <a-tab-pane tab="登录日志" key="1" />
+        <a-tab-pane tab="操作日志" key="2" />
       </a-tabs>
     </template>
     <template #expandedRowRender="{ record }">

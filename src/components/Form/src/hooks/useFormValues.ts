@@ -43,9 +43,8 @@ export function useFormValues({
       }
       set(res, key, value);
     }
-    return handleRangeValue(getProps,res);
+    return handleRangeValue(getProps, res);
   }
-
 
   function initDefault() {
     const schemas = unref(getSchema);

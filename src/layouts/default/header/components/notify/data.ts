@@ -204,4 +204,4 @@ export const tabListData: TabItem[] = [
   //     },
   //   ],
   // },
-]
+];

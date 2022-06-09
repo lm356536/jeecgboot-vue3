@@ -77,7 +77,7 @@
        * 监听selectOptions变化
        */
       watch(selectOptions, () => {
-        if (selectOptions) {
+        if (selectOptions.value) {
           emit('select', toRaw(unref(selectOptions)), toRaw(unref(selectValues)));
         }
       });

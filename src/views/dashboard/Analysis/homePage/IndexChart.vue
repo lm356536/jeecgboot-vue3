@@ -12,13 +12,13 @@
         >
           <a-row>
             <a-col :span="6">
-              <HeadInfo title="今日IP" :content="loginfo.todayIp" icon="environment"></HeadInfo>
+              <HeadInfo title="今日IP" :content="loginfo.todayIp" icon="environment" />
             </a-col>
             <a-col :span="6">
-              <HeadInfo title="今日访问" :content="loginfo.todayVisitCount" icon="team"></HeadInfo>
+              <HeadInfo title="今日访问" :content="loginfo.todayVisitCount" icon="team" />
             </a-col>
             <a-col :span="6">
-              <HeadInfo title="总访问量" :content="loginfo.totalVisitCount" icon="rise"></HeadInfo>
+              <HeadInfo title="总访问量" :content="loginfo.totalVisitCount" icon="rise" />
             </a-col>
           </a-row>
           <LineMulti
@@ -26,7 +26,7 @@
             height="50vh"
             type="line"
             :option="{ legend: { top: 'bottom' } }"
-          ></LineMulti>
+          />
         </a-card>
       </a-col>
     </a-row>

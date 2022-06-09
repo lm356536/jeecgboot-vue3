@@ -25,7 +25,7 @@
     >
       <slot name="more"></slot>
       <a-button type="link" size="small" v-if="!$slots.more">
-        更多 <Icon icon="mdi-light:chevron-down"></Icon>
+        更多 <Icon icon="mdi-light:chevron-down" />
       </a-button>
     </Dropdown>
   </div>

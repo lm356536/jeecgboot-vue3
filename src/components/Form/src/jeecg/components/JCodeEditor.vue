@@ -53,9 +53,9 @@
 
   export default defineComponent({
     name: 'JCodeEditor',
+    components: {},
     // 不将 attrs 的属性绑定到 html 标签上
     inheritAttrs: false,
-    components: {},
     props: {
       value: propTypes.string.def(''),
       height: propTypes.string.def('auto'),

@@ -106,7 +106,7 @@
       });
     }
     // 隐藏底部时禁用整个表单
-    setProps({ disabled: !showFooter });
+    setProps({ disabled: !showFooter.value });
   });
   //获取标题
   const getTitle = computed(() => (!unref(isUpdate) ? '新增用户' : '编辑用户'));

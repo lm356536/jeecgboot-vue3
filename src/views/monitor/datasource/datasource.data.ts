@@ -34,9 +34,15 @@ const dbDriverMap = {
 };
 const dbUrlMap = {
   // MySQL 数据库
-  '1': { dbUrl: 'jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false' },
+  '1': {
+    dbUrl:
+      'jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false',
+  },
   //MySQL5.7+ 数据库
-  '4': { dbUrl: 'jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai' },
+  '4': {
+    dbUrl:
+      'jdbc:mysql://127.0.0.1:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai',
+  },
   // Oracle
   '2': { dbUrl: 'jdbc:oracle:thin:@127.0.0.1:1521:ORCL' },
   // SQLServer 数据库
@@ -46,7 +52,10 @@ const dbUrlMap = {
   // Postgresql 数据库
   '6': { dbUrl: 'jdbc:postgresql://127.0.0.1:5432/jeecg-boot' },
   // 达梦 数据库
-  '7': { dbUrl: 'jdbc:dm://127.0.0.1:5236/?jeecg-boot&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8' },
+  '7': {
+    dbUrl:
+      'jdbc:dm://127.0.0.1:5236/?jeecg-boot&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8',
+  },
   // 人大金仓 数据库
   '8': { dbUrl: 'jdbc:kingbase8://127.0.0.1:54321/jeecg-boot' },
   // 神通 数据库
@@ -125,7 +134,7 @@ export const formSchema: FormSchema[] = [
     label: '数据源编码',
     component: 'Input',
     required: true,
-    dynamicDisabled: ({values}) => {
+    dynamicDisabled: ({ values }) => {
       return !!values.id;
     },
   },
@@ -144,7 +153,7 @@ export const formSchema: FormSchema[] = [
       return {
         dictCode: 'database_type',
         onChange: (e: any) => {
-          formModel=Object.assign(formModel,dbDriverMap[e], dbUrlMap[e]);
+          formModel = Object.assign(formModel, dbDriverMap[e], dbUrlMap[e]);
         },
       };
     },
@@ -172,7 +181,7 @@ export const formSchema: FormSchema[] = [
     label: '密码',
     required: true,
     component: 'InputPassword',
-    slot:'pwd'
+    slot: 'pwd',
   },
   {
     field: 'remark',

@@ -14,18 +14,18 @@
           <template #overlay>
             <a-menu>
               <a-menu-item key="1" @click="batchHandleDelete">
-                <Icon icon="ant-design:delete-outlined"></Icon>
+                <Icon icon="ant-design:delete-outlined" />
                 批量删除
               </a-menu-item>
               <a-menu-item key="1" @click="batchHandleRevert">
-                <Icon icon="ant-design:redo-outlined"></Icon>
+                <Icon icon="ant-design:redo-outlined" />
                 批量还原
               </a-menu-item>
             </a-menu>
           </template>
           <a-button
             >批量操作
-            <Icon icon="ant-design:down-outlined"></Icon>
+            <Icon icon="ant-design:down-outlined" />
           </a-button>
         </a-dropdown>
       </template>

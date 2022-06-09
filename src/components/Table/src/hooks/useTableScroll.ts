@@ -9,11 +9,11 @@ import { onMountedOrActivated } from '/@/hooks/core/onMountedOrActivated';
 import { useDebounceFn } from '@vueuse/core';
 
 export function useTableScroll(
-    propsRef: ComputedRef<BasicTableProps>,
-    tableElRef: Ref<ComponentRef>,
-    columnsRef: ComputedRef<BasicColumn[]>,
-    rowSelectionRef: ComputedRef<TableRowSelection<any> | null>,
-    getDataSourceRef: ComputedRef<Recordable[]>
+  propsRef: ComputedRef<BasicTableProps>,
+  tableElRef: Ref<ComponentRef>,
+  columnsRef: ComputedRef<BasicColumn[]>,
+  rowSelectionRef: ComputedRef<TableRowSelection<any> | null>,
+  getDataSourceRef: ComputedRef<Recordable[]>,
 ) {
   const tableHeightRef: Ref<Nullable<number>> = ref(null);
 
@@ -28,13 +28,13 @@ export function useTableScroll(
   });
 
   watch(
-      () => [unref(getCanResize), unref(getDataSourceRef)?.length],
-      () => {
-        debounceRedoHeight();
-      },
-      {
-        flush: 'post',
-      }
+    () => [unref(getCanResize), unref(getDataSourceRef)?.length],
+    () => {
+      debounceRedoHeight();
+    },
+    {
+      flush: 'post',
+    },
   );
 
   function redoHeight() {
@@ -74,14 +74,14 @@ export function useTableScroll(
 
     if (hasScrollBarY) {
       tableEl.classList.contains('hide-scrollbar-y') &&
-      tableEl.classList.remove('hide-scrollbar-y');
+        tableEl.classList.remove('hide-scrollbar-y');
     } else {
       !tableEl.classList.contains('hide-scrollbar-y') && tableEl.classList.add('hide-scrollbar-y');
     }
 
     if (hasScrollBarX) {
       tableEl.classList.contains('hide-scrollbar-x') &&
-      tableEl.classList.remove('hide-scrollbar-x');
+        tableEl.classList.remove('hide-scrollbar-x');
     } else {
       !tableEl.classList.contains('hide-scrollbar-x') && tableEl.classList.add('hide-scrollbar-x');
     }
@@ -133,12 +133,12 @@ export function useTableScroll(
     }
 
     let height =
-        bottomIncludeBody -
-        (resizeHeightOffset || 0) -
-        paddingHeight -
-        paginationHeight -
-        footerHeight -
-        headerHeight;
+      bottomIncludeBody -
+      (resizeHeightOffset || 0) -
+      paddingHeight -
+      paginationHeight -
+      footerHeight -
+      headerHeight;
 
     height = (height < minHeight! ? (minHeight as number) : height) ?? height;
     height = (height > maxHeight! ? (maxHeight as number) : height) ?? height;

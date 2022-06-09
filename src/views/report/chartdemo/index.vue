@@ -9,7 +9,7 @@
                 :chartData="barDataSource"
                 height="50vh"
                 :option="{ title: { text: '销售额排行', left: 'center' } }"
-              ></Bar>
+              />
             </a-col>
             <!-- <a-col :span="7" style="margin-left:50px" >
                             配置项：
@@ -18,28 +18,23 @@
           </a-row>
         </a-tab-pane>
         <a-tab-pane key="2" tab="多列柱状图" force-render>
-          <BarMulti :chartData="barMultiData" :option="multiBarOption" height="50vh"></BarMulti>
+          <BarMulti :chartData="barMultiData" :option="multiBarOption" height="50vh" />
         </a-tab-pane>
         <a-tab-pane key="3" tab="迷你柱状图" style="display: flex; justify-content: center">
-          <Bar :chartData="barDataSource" width="30%" height="50vh"></Bar>
+          <Bar :chartData="barDataSource" width="30%" height="50vh" />
         </a-tab-pane>
         <a-tab-pane key="4" tab="面积图">
           <Line
             :chartData="barDataSource"
             height="50vh"
             :option="{ title: { text: '销售额排行', left: 'center' } }"
-          ></Line>
+          />
         </a-tab-pane>
         <a-tab-pane key="5" tab="迷你面积图" style="display: flex; justify-content: center">
-          <Line :chartData="barDataSource" width="30%" height="50vh"></Line>
+          <Line :chartData="barDataSource" width="30%" height="50vh" />
         </a-tab-pane>
         <a-tab-pane key="6" tab="多行折线图">
-          <LineMulti
-            :chartData="barMultiData"
-            height="50vh"
-            :option="multiBarOption"
-            type="line"
-          ></LineMulti>
+          <LineMulti :chartData="barMultiData" height="50vh" :option="multiBarOption" type="line" />
         </a-tab-pane>
         <a-tab-pane key="7" tab="饼图">
           <pie
@@ -49,20 +44,16 @@
           />
         </a-tab-pane>
         <a-tab-pane key="8" tab="雷达图">
-          <Radar :chartData="radarData" height="50vh"></Radar>
+          <Radar :chartData="radarData" height="50vh" />
         </a-tab-pane>
         <a-tab-pane key="9" tab="仪表盘">
-          <Gauge :chartData="{ name: '出勤率', value: 70 }" height="50vh"></Gauge>
+          <Gauge :chartData="{ name: '出勤率', value: 70 }" height="50vh" />
         </a-tab-pane>
         <a-tab-pane key="10" tab="折柱图">
-          <BarAndLine :chartData="barLineData" height="50vh"></BarAndLine>
+          <BarAndLine :chartData="barLineData" height="50vh" />
         </a-tab-pane>
         <a-tab-pane key="11" tab="排名列表">
-          <RankList
-            title="门店销售排行榜"
-            :list="rankList"
-            style="width: 600px; margin: 0 auto"
-          ></RankList>
+          <RankList title="门店销售排行榜" :list="rankList" style="width: 600px; margin: 0 auto" />
         </a-tab-pane>
         <a-tab-pane key="13" tab="趋势">
           <trend title="Trend" term="Trend：" :percentage="30" />

@@ -6,7 +6,7 @@
   import { useECharts } from '/@/hooks/web/useECharts';
 
   export default defineComponent({
-    name: 'line',
+    name: 'Line',
     props: {
       chartData: {
         type: Array,

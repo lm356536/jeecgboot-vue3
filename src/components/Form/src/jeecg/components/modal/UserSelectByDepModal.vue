@@ -23,7 +23,7 @@
             :selectedKeys="selectedDepIds"
             :expandedKeys="expandedKeys"
             :clickRowToExpand="false"
-          ></BasicTree>
+          />
         </a-card>
       </a-col>
       <a-col :md="17" :sm="24">
@@ -35,7 +35,7 @@
             :searchInfo="searchInfo"
             :api="getTableList"
             :rowSelection="rowSelection"
-          ></BasicTable>
+          />
         </a-card>
       </a-col>
     </a-row>

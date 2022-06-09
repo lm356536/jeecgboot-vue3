@@ -5,17 +5,17 @@
  * @param dom 一级dom节点
  * @param tagName 标签名，不区分大小写
  */
-export function getParentNodeByTagName(dom: HTMLElement, tagName: string = 'body'): HTMLElement | null {
+export function getParentNodeByTagName(dom: HTMLElement, tagName = 'body'): HTMLElement | null {
   if (tagName === 'body') {
-    return document.body
+    return document.body;
   }
   if (dom.parentElement) {
     if (dom.parentElement.tagName.toLowerCase() === tagName.trim().toLowerCase()) {
-      return dom.parentElement
+      return dom.parentElement;
     } else {
-      return getParentNodeByTagName(dom.parentElement, tagName)
+      return getParentNodeByTagName(dom.parentElement, tagName);
     }
   } else {
-    return null
+    return null;
   }
 }

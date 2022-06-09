@@ -14,7 +14,7 @@
   import { propTypes } from '/@/utils/propTypes';
 
   export default defineComponent({
-    name: 'step3',
+    name: 'Step3',
     components: {
       Button,
       Form,

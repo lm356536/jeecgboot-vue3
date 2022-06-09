@@ -1,5 +1,5 @@
 <template>
-  <a-input v-bind="getBindValue" v-model:value="showText" @input="backValue"></a-input>
+  <a-input v-bind="getBindValue" v-model:value="showText" @input="backValue" />
 </template>
 
 <script lang="ts">

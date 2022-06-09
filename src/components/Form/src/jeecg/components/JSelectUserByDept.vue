@@ -6,13 +6,13 @@
       @handleOpen="handleOpen"
       :loading="loadingEcho"
       v-bind="attrs"
-    ></JSelectBiz>
+    />
     <UserSelectByDepModal
       :rowKey="rowKey"
       @register="regModal"
       @getSelectResult="setValue"
       v-bind="getBindValue"
-    ></UserSelectByDepModal>
+    />
   </div>
 </template>
 <script lang="ts">

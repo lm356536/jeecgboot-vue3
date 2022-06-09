@@ -4,7 +4,7 @@
     <a-row>
       <template v-if="diskInfo && diskInfo.length > 0">
         <a-col :span="6" v-for="(item, index) in diskInfo" :key="'diskInfo' + index">
-          <gauge :data="item"></gauge>
+          <gauge :data="item" />
         </a-col>
       </template>
     </a-row>

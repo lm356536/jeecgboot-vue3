@@ -20,7 +20,7 @@
           @change="handleChange"
           style="width: 100%"
           @click="!disabled && openModal(false)"
-        ></a-select>
+        />
       </a-col>
       <a-col v-if="showButton" class="right">
         <a-button type="primary" @click="openModal(true)" :disabled="disabled">选择</a-button>

@@ -68,7 +68,7 @@
         </a-form>
       </a-spin>
     </BasicModal>
-    <DataLogCompareModal @register="registerDataLogCompareModal"></DataLogCompareModal>
+    <DataLogCompareModal @register="registerDataLogCompareModal" />
   </div>
 </template>
 <script lang="ts" setup>

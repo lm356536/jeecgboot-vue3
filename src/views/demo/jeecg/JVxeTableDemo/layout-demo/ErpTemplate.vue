@@ -17,7 +17,7 @@
       style="margin-bottom: 8px"
       @pageChange="handleTable1PageChange"
       @selectRowChange="handleTable1SelectRowChange"
-    ></JVxeTable>
+    />
 
     <a-tabs v-show="subTabs.show" :class="{ 'sub-tabs': true, 'un-expand': !subTabs.expand }">
       <a-tab-pane tab="子表1" key="1">

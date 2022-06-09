@@ -13,7 +13,7 @@
         valueFormat="YYYY-MM-DD"
         :placeholder="'请选择' + item.label"
         v-model:value="queryParam[item.field]"
-      ></a-date-picker>
+      />
     </template>
     <template v-else>
       <a-date-picker
@@ -22,7 +22,7 @@
         placeholder="开始日期"
         v-model:value="queryParam[item.field + '_begin']"
         style="width: calc(50% - 15px)"
-      ></a-date-picker>
+      />
       <span class="group-query-strig">~</span>
       <a-date-picker
         :showTime="false"
@@ -30,7 +30,7 @@
         placeholder="结束日期"
         v-model:value="queryParam[item.field + '_end']"
         style="width: calc(50% - 15px)"
-      ></a-date-picker>
+      />
     </template>
   </a-form-item>
 
@@ -48,7 +48,7 @@
         :show-time="true"
         valueFormat="YYYY-MM-DD HH:mm:ss"
         v-model:value="queryParam[item.field]"
-      ></a-date-picker>
+      />
     </template>
     <template v-else>
       <a-date-picker
@@ -57,7 +57,7 @@
         valueFormat="YYYY-MM-DD HH:mm:ss"
         v-model:value="queryParam[item.field + '_begin']"
         style="width: calc(50% - 9px); min-width: 60px"
-      ></a-date-picker>
+      />
       <span class="group-query-strig" style="width: auto; padding: 0 4px">~</span>
       <a-date-picker
         placeholder="2选择结束时间"
@@ -65,7 +65,7 @@
         valueFormat="YYYY-MM-DD HH:mm:ss"
         v-model:value="queryParam[item.field + '_end']"
         style="width: calc(50% - 9px); min-width: 60px"
-      ></a-date-picker>
+      />
     </template>
   </a-form-item>
 
@@ -83,7 +83,7 @@
         mode="time"
         valueFormat="HH:mm:ss"
         v-model:value="queryParam[item.field]"
-      ></a-date-picker>
+      />
     </template>
     <template v-else>
       <a-date-picker
@@ -92,7 +92,7 @@
         valueFormat="HH:mm:ss"
         v-model:value="queryParam[item.field + '_begin']"
         style="width: calc(50% - 15px)"
-      ></a-date-picker>
+      />
       <span class="group-query-strig">~</span>
       <a-date-picker
         placeholder="请选择结束时间"
@@ -100,7 +100,7 @@
         valueFormat="HH:mm:ss"
         v-model:value="queryParam[item.field + '_end']"
         style="width: calc(50% - 15px)"
-      ></a-date-picker>
+      />
     </template>
   </a-form-item>
 
@@ -121,8 +121,7 @@
       :placeholder="'请选择' + item.label"
       v-model="queryParam[item.field]"
       :dictCode="getDictCode(item)"
-    >
-    </JDictSelectTag>
+    />
     <a-select v-else :placeholder="'请选择' + item.label" v-model:value="queryParam[item.field]">
       <template v-for="(obj, index) in dictOptions[getDictOptionKey(item)]" :key="index">
         <a-select-option :value="obj.value"> {{ obj.text }}</a-select-option>
@@ -146,8 +145,7 @@
       :pidValue="item.pidValue"
       :hasChildField="item.hasChildField"
       load-triggle-change
-    >
-    </JTreeSelect>
+    />
   </a-form-item>
 
   <a-form-item
@@ -178,8 +176,7 @@
       v-model:value="queryParam[item.field]"
       :placeholder="'请选择' + item.label"
       :dict="getDictCode(item)"
-    >
-    </JDictSelectTag>
+    />
     <!--TODO 新需要的组件-->
     <!-- <j-online-search-select
                 v-else
@@ -201,7 +198,7 @@
     <JSelectUserByDept
       v-model:value="queryParam[item.field]"
       :placeholder="'请选择' + item.label"
-    ></JSelectUserByDept>
+    />
   </a-form-item>
 
   <a-form-item
@@ -269,23 +266,20 @@
       <span :title="item.label" class="label-text">{{ item.label }}</span>
     </template>
     <template v-if="single_mode === item.mode">
-      <a-input
-        :placeholder="'请输入' + item.label"
-        v-model:value="queryParam[item.field]"
-      ></a-input>
+      <a-input :placeholder="'请输入' + item.label" v-model:value="queryParam[item.field]" />
     </template>
     <template v-else>
       <a-input
         :placeholder="'请输入开始' + item.label"
         v-model:value="queryParam[item.field + '_begin']"
         style="width: calc(50% - 15px)"
-      ></a-input>
+      />
       <span class="group-query-strig">~</span>
       <a-input
         :placeholder="'请输入结束' + item.label"
         v-model:value="queryParam[item.field + '_end']"
         style="width: calc(50% - 15px)"
-      ></a-input>
+      />
     </template>
   </a-form-item>
 </template>

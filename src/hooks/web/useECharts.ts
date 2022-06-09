@@ -10,8 +10,8 @@ import echarts from '/@/utils/lib/echarts';
 import { useRootSetting } from '/@/hooks/setting/useRootSetting';
 
 export function useECharts(
-    elRef: Ref<HTMLDivElement>,
-    theme: 'light' | 'dark' | 'default' = 'default'
+  elRef: Ref<HTMLDivElement>,
+  theme: 'light' | 'dark' | 'default' = 'default',
 ) {
   const { getDarkMode: getSysDarkMode } = useRootSetting();
 
@@ -83,14 +83,14 @@ export function useECharts(
   }
 
   watch(
-      () => getDarkMode.value,
-      (theme) => {
-        if (chartInstance) {
-          chartInstance.dispose();
-          initCharts(theme as 'default');
-          setOptions(cacheOptions.value);
-        }
+    () => getDarkMode.value,
+    (theme) => {
+      if (chartInstance) {
+        chartInstance.dispose();
+        initCharts(theme as 'default');
+        setOptions(cacheOptions.value);
       }
+    },
   );
 
   tryOnUnmounted(() => {

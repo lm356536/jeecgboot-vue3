@@ -1,10 +1,11 @@
 <template>
-  <component :is="comp" :formData="formData" ref="compModel" v-if="comp"></component>
+  <component :is="comp" :formData="formData" ref="compModel" v-if="comp" />
 </template>
 <script>
   const modules = import.meta.glob('/@/views/monitor/mynews/*.vue');
   export default {
     name: 'DynamicNotice',
+    props: ['path', 'formData'],
     data() {
       return {
         compName: this.path,
@@ -18,7 +19,6 @@
         return () => modules[`/@/views/monitor/mynews/${this.path}`];
       },
     },
-    props: ['path', 'formData'],
     methods: {
       detail() {
         setTimeout(() => {

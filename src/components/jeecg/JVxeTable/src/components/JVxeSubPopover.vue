@@ -16,7 +16,7 @@
 
     <template #content>
       <transition name="fade">
-        <slot v-if="visible" name="subForm" :row="row" :column="column" />
+        <slot v-if="visible" name="subForm" :row="row" :column="column"></slot>
       </transition>
     </template>
 

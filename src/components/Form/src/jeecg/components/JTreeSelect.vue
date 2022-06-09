@@ -13,8 +13,7 @@
     v-bind="attrs"
     @change="onChange"
     @search="onSearch"
-  >
-  </a-tree-select>
+  />
 </template>
 <script lang="ts" setup>
   /*

@@ -4,7 +4,7 @@
       <!-- 工具按钮 -->
       <template #buttons>
         <div :class="`${prefixCls}-button div`" :size="btnSize">
-          <slot v-if="showPrefix" name="toolbarPrefix" :size="btnSize" />
+          <slot v-if="showPrefix" name="toolbarPrefix" :size="btnSize"></slot>
           <a-button
             v-if="showAdd"
             type="primary"
@@ -36,7 +36,7 @@
               >
             </template>
           </template>
-          <slot v-if="showSuffix" name="toolbarSuffix" :size="btnSize" />
+          <slot v-if="showSuffix" name="toolbarSuffix" :size="btnSize"></slot>
           <a v-if="showCollapse" style="margin-left: 4px" @click="toggleCollapse">
             <span>{{ collapsed ? '展开' : '收起' }}</span>
             <Icon :icon="collapsed ? 'ant-design:down-outlined' : 'ant-design:up-outlined'" />

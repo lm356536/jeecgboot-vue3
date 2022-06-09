@@ -1,13 +1,13 @@
 <!--用户选择组件-->
 <template>
   <div>
-    <JSelectBiz @handleOpen="handleOpen" :loading="loadingEcho" v-bind="attrs"></JSelectBiz>
+    <JSelectBiz @handleOpen="handleOpen" :loading="loadingEcho" v-bind="attrs" />
     <UserSelectModal
       :rowKey="rowKey"
       @register="regModal"
       @getSelectResult="setValue"
       v-bind="getBindValue"
-    ></UserSelectModal>
+    />
   </div>
 </template>
 <script lang="ts">

@@ -12,7 +12,7 @@
       </a-row>
     </a-card>
 
-    <BasicTable @register="registerTable" :api="getInfo"></BasicTable>
+    <BasicTable @register="registerTable" :api="getInfo" />
   </div>
 </template>
 <script lang="ts" name="monitor-redis" setup>

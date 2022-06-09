@@ -38,7 +38,7 @@
   import { columns, searchFormSchema } from './role.data';
 
   export default defineComponent({
-    name: 'system-demorole',
+    name: 'SystemDemorole',
     components: { BasicTable, RoleDrawer, TableAction },
     setup() {
       const [registerDrawer, { openDrawer }] = useDrawer();

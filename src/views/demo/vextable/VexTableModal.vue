@@ -67,35 +67,35 @@
             :data="orderMainModel.jeecgOrderCustomerList"
             :edit-config="{ trigger: 'click', mode: 'row', icon: 'fa fa-pencil', showStatus: true }"
           >
-            <vxe-column type="checkbox" width="60" align="center"></vxe-column>
-            <vxe-column type="seq" width="60" align="center"></vxe-column>
+            <vxe-column type="checkbox" width="60" align="center" />
+            <vxe-column type="seq" width="60" align="center" />
             <vxe-column
               field="name"
               title="客户名"
               sortable
               :edit-render="{ name: 'input', defaultValue: '' }"
-            ></vxe-column>
+            />
             <vxe-column
               field="sex"
               title="性别"
               :edit-render="{ name: '$select', options: sexList }"
-            ></vxe-column>
+            />
             <vxe-column
               field="idcard"
               title="身份证"
               sortable
               :edit-render="{ name: 'input', defaultValue: '' }"
-            ></vxe-column>
+            />
             <vxe-column
               field="telphone"
               title="手机"
               sortable
               :edit-render="{ name: 'input', defaultValue: '' }"
-            ></vxe-column>
+            />
           </vxe-table>
         </a-tab-pane>
 
-        <a-tab-pane tab="机票信息" key="2" forceRender> </a-tab-pane>
+        <a-tab-pane tab="机票信息" key="2" forceRender />
       </a-tabs>
     </a-form>
   </BasicModal>

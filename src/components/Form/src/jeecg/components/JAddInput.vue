@@ -17,7 +17,7 @@
       class="dynamic-delete-button"
       @click="remove(param)"
       style="width: 50px"
-    ></MinusCircleOutlined>
+    />
   </div>
   <div>
     <a-button type="dashed" style="width: 60%" @click="add">

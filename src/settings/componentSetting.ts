@@ -27,7 +27,7 @@ export default {
     defaultSortFn: (sortInfo: SorterResult) => {
       const { field, order } = sortInfo;
       if (field && order) {
-        let sortType = 'ascend' == order ? 'asc' : 'desc';
+        const sortType = 'ascend' == order ? 'asc' : 'desc';
         return {
           // 排序字段
           column: field,

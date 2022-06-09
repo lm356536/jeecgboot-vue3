@@ -19,7 +19,7 @@
           <div class="ant-upload-text">{{ text }}</div>
         </div>
         <a-button v-if="listType == 'picture'">
-          <UploadOutlined></UploadOutlined>
+          <UploadOutlined />
           {{ text }}
         </a-button>
       </div>
@@ -221,8 +221,8 @@
       }
 
       function getAvatarView() {
-        if (uploadFileList.length > 0) {
-          let url = uploadFileList[0].url;
+        if (uploadFileList.value.length > 0) {
+          let url = uploadFileList.value[0].url;
           return getFileAccessHttpUrl(url, null);
         }
       }

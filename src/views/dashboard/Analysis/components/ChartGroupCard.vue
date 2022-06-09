@@ -17,20 +17,20 @@
           <Trend term="周同比" :percentage="12" v-if="index === 0" />
           <Trend term="日同比" :percentage="11" v-if="index === 0" :type="false" />
 
-          <Line v-if="index === 1" :option="option" :chartData="chartData" height="50px"></Line>
+          <Line v-if="index === 1" :option="option" :chartData="chartData" height="50px" />
 
-          <Bar v-if="index === 2" :option="option" :chartData="chartData" height="50px"></Bar>
+          <Bar v-if="index === 2" :option="option" :chartData="chartData" height="50px" />
 
-          <Progress v-if="index === 3" :percent="78" :show-info="false"></Progress>
+          <Progress v-if="index === 3" :percent="78" :show-info="false" />
         </div>
         <div v-else>
-          <Line v-if="index === 0" :option="option" :chartData="chartData" height="50px"></Line>
+          <Line v-if="index === 0" :option="option" :chartData="chartData" height="50px" />
 
-          <Line v-if="index === 1" :option="option" :chartData="chartData" height="50px"></Line>
+          <Line v-if="index === 1" :option="option" :chartData="chartData" height="50px" />
 
-          <Bar v-if="index === 2" :option="option" :chartData="chartData" height="50px"></Bar>
+          <Bar v-if="index === 2" :option="option" :chartData="chartData" height="50px" />
 
-          <Bar v-if="index === 3" :option="option" :chartData="chartData" height="50px"></Bar>
+          <Bar v-if="index === 3" :option="option" :chartData="chartData" height="50px" />
         </div>
         <template #footer v-if="type === 'chart'">
           <span v-if="inde !== 3"

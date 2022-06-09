@@ -10,14 +10,14 @@ const { uploadUrl = '' } = useGlobSetting();
  */
 export function uploadApi(
   params: UploadFileParams,
-  onUploadProgress: (progressEvent: ProgressEvent) => void
+  onUploadProgress: (progressEvent: ProgressEvent) => void,
 ) {
   return defHttp.uploadFile<UploadApiResult>(
     {
       url: uploadUrl,
       onUploadProgress,
     },
-    params
+    params,
   );
 }
 /**
@@ -25,13 +25,14 @@ export function uploadApi(
  */
 export function uploadImg(
   params: UploadFileParams,
-  onUploadProgress: (progressEvent: ProgressEvent) => void
+  onUploadProgress: (progressEvent: ProgressEvent) => void,
 ) {
   return defHttp.uploadFile<UploadApiResult>(
     {
       url: `${uploadUrl}/sys/common/upload`,
       onUploadProgress,
     },
-    params, {isReturnResponse:true}
+    params,
+    { isReturnResponse: true },
   );
 }

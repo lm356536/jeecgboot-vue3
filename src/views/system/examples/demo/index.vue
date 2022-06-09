@@ -6,7 +6,7 @@
         <a-row :gutter="24">
           <a-col :lg="8">
             <a-form-item label="用户名">
-              <a-input placeholder="请输入名称模糊查询" v-model:value="queryParam.name"></a-input>
+              <a-input placeholder="请输入名称模糊查询" v-model:value="queryParam.name" />
             </a-form-item>
           </a-col>
           <a-col :lg="8">
@@ -16,14 +16,14 @@
                 type="ge"
                 v-model:value="queryParam.age_begin"
                 style="width: calc(50% - 15px)"
-              ></a-input>
+              />
               <span>~</span>
               <a-input
                 placeholder="最大年龄"
                 type="le"
                 v-model:value="queryParam.age_end"
                 style="width: calc(50% - 15px)"
-              ></a-input>
+              />
             </a-form-item>
           </a-col>
           <template v-if="toggleSearchStatus">
@@ -81,7 +81,7 @@
           v-model:value="min"
           style="width: calc(50% - 15px)"
           @change="ageChange(model, field)"
-        ></a-input>
+        />
         <span>~</span>
         <a-input
           placeholder="最大年龄"
@@ -89,7 +89,7 @@
           v-model:value="max"
           style="width: calc(50% - 15px)"
           @change="ageChange(model, field)"
-        ></a-input>
+        />
       </template>
       <template #tableTitle>
         <a-button preIcon="ant-design:plus-outlined" type="primary" @click="handleAdd"
@@ -126,14 +126,14 @@
           <template #overlay>
             <a-menu>
               <a-menu-item key="1" @click="batchHandleDelete">
-                <Icon icon="ant-design:delete-outlined"></Icon>
+                <Icon icon="ant-design:delete-outlined" />
                 删除
               </a-menu-item>
             </a-menu>
           </template>
           <a-button
             >批量操作
-            <Icon style="fontsize: 12px" icon="ant-design:down-outlined"></Icon>
+            <Icon style="fontsize: 12px" icon="ant-design:down-outlined" />
           </a-button>
         </a-dropdown>
       </template>

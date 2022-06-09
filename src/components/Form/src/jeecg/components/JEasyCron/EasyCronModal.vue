@@ -12,8 +12,8 @@
 
   export default defineComponent({
     name: 'EasyCronModal',
-    inheritAttrs: false,
     components: { BasicModal, EasyCron },
+    inheritAttrs: false,
     setup() {
       const attrs = useAttrs();
       const [registerModal, { closeModal }] = useModalInner();

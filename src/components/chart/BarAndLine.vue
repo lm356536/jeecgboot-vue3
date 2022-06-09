@@ -6,7 +6,7 @@
   import { useECharts } from '/@/hooks/web/useECharts';
 
   export default defineComponent({
-    name: 'barAndLine',
+    name: 'BarAndLine',
     props: {
       chartData: {
         type: Array,

@@ -13,7 +13,7 @@ export function resultPageSuccess<T = any>(
   pageNo: number,
   pageSize: number,
   list: T[],
-  { message = 'ok' } = {}
+  { message = 'ok' } = {},
 ) {
   const pageData = pagination(pageNo, pageSize, list);
 

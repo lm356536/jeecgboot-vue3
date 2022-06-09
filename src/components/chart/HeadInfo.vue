@@ -2,7 +2,7 @@
   <div class="head-info" :class="center && 'center'">
     <span>{{ title }}</span>
     <p>{{ content }} <a-icon :type="icon" style="font-size: 24px; color: #2b99ff" /></p>
-    <em v-if="bordered" />
+    <em v-if="bordered"></em>
   </div>
 </template>
 

@@ -25,8 +25,7 @@
       keyboardEdit
       :columns="columns"
       :dataSource="dataSource"
-    >
-    </JVxeTable>
+    />
   </div>
 </template>
 <script lang="ts">

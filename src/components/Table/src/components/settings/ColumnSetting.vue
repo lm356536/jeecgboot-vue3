@@ -136,9 +136,6 @@
 
   export default defineComponent({
     name: 'ColumnSetting',
-    props: {
-      isMobile: Boolean,
-    },
     components: {
       SettingOutlined,
       Popover,
@@ -149,6 +146,9 @@
       ScrollContainer,
       Divider,
       Icon,
+    },
+    props: {
+      isMobile: Boolean,
     },
     emits: ['columns-change'],
 

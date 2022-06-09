@@ -22,8 +22,8 @@
     </BasicTable>
     <!--        <TableDrawer @register="registerDrawer" @success="handleSuccess" />-->
     <TableModal @register="registerModal" @success="handleSuccess" />
-    <JVxeTableModal @register="registerVexTableModal" @success="handleSuccess"></JVxeTableModal>
-    <OneToOneModal @register="registerOneToOneModal" @success="handleSuccess"></OneToOneModal>
+    <JVxeTableModal @register="registerVexTableModal" @success="handleSuccess" />
+    <OneToOneModal @register="registerOneToOneModal" @success="handleSuccess" />
   </div>
 </template>
 <script lang="ts" setup>

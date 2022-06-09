@@ -18,7 +18,7 @@
           :load-data="loadChildrenTreeData"
           v-model:expandedKeys="expandedKeys"
           @select="onSelect"
-        ></a-tree>
+        />
       </template>
       <a-empty v-else description="暂无数据" />
     </a-spin>

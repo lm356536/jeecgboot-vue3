@@ -75,8 +75,8 @@
 
   export default defineComponent({
     name: 'JDictSelectTag',
-    inheritAttrs: false,
     components: { LoadingOutlined },
+    inheritAttrs: false,
     props: {
       value: propTypes.oneOfType([propTypes.string, propTypes.number, propTypes.array]),
       dictCode: propTypes.string,

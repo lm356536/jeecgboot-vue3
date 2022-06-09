@@ -10,8 +10,7 @@
     style="width: 100%"
     v-bind="attrs"
     @change="onChange"
-  >
-  </TreeSelect>
+  />
 </template>
 
 <script lang="ts" setup>

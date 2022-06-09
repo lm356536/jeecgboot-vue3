@@ -55,7 +55,7 @@
               <span>已选中 {{ selectRowKeys.length }} 条记录(可跨页)</span>
               <a-divider type="vertical" />
               <a @click="setSelectedRowKeys([])">清空</a>
-              <slot name="alertAfter" />
+              <slot name="alertAfter"></slot>
             </template>
             <template v-else>
               <span>未选中任何数据</span>

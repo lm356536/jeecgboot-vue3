@@ -7,10 +7,10 @@ import type {
   SorterResult,
   TableCustomRecord,
   TableRowSelection,
-  SizeType
+  SizeType,
 } from './types/table';
 import type { FormProps } from '/@/components/Form';
-import { DEFAULT_FILTER_FN, DEFAULT_SORT_FN, FETCH_SETTING,DEFAULT_SIZE} from './const';
+import { DEFAULT_FILTER_FN, DEFAULT_SORT_FN, FETCH_SETTING, DEFAULT_SIZE } from './const';
 import { propTypes } from '/@/utils/propTypes';
 
 export const basicProps = {
@@ -139,13 +139,13 @@ export const basicProps = {
   },
   beforeEditSubmit: {
     type: Function as PropType<
-        (data: {
-          record: Recordable;
-          index: number;
-          key: string | number;
-          value: any;
-        }) => Promise<any>
-        >,
+      (data: {
+        record: Recordable;
+        index: number;
+        key: string | number;
+        value: any;
+      }) => Promise<any>
+    >,
   },
   size: {
     type: String as PropType<SizeType>,

@@ -11,7 +11,7 @@
           :style="{ height: '500px', 'border-right': '2px solid #c1c1c1', 'overflow-y': 'auto' }"
           @expand="onExpand"
           @select="onSelect"
-        ></a-tree>
+        />
       </a-col>
 
       <!--右侧缩略图-->

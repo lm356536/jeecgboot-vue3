@@ -33,15 +33,15 @@
 
   export default defineComponent({
     name: 'SizeSetting',
-    props: {
-      isMobile: Boolean,
-    },
     components: {
       ColumnHeightOutlined,
       Tooltip,
       Dropdown,
       Menu,
       MenuItem: Menu.Item,
+    },
+    props: {
+      isMobile: Boolean,
     },
     setup(props) {
       const table = useTableContext();

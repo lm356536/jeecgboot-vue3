@@ -86,7 +86,7 @@
     tenantId: number;
   }
   export default defineComponent({
-    name: 'loginSelect',
+    name: 'LoginSelect',
     components: {
       Avatar,
       BasicModal,

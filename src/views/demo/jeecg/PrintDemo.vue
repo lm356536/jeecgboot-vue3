@@ -17,7 +17,7 @@
               <span style="margin-left: 12.5%">打印日期:</span>
               <a-input style="width: 30%" v-model:value="model.printTime" />
             </a-col>
-            <a-col :span="24"> </a-col>
+            <a-col :span="24" />
             <a-col :span="24" style="margin-top: 20px">
               <span>打印内容:</span>
               <a-input style="width: 80%" v-model:value="model.printContent" />

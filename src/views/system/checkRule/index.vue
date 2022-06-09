@@ -16,14 +16,14 @@
           <template #overlay>
             <a-menu>
               <a-menu-item key="1" @click="batchHandleDelete">
-                <Icon icon="ant-design:delete-outlined"></Icon>
+                <Icon icon="ant-design:delete-outlined" />
                 <span>删除</span>
               </a-menu-item>
             </a-menu>
           </template>
           <a-button>
             <span>批量操作</span>
-            <Icon icon="mdi:chevron-down"></Icon>
+            <Icon icon="mdi:chevron-down" />
           </a-button>
         </a-dropdown>
       </template>
@@ -37,8 +37,8 @@
       </template>
     </BasicTable>
 
-    <CheckRuleTestModal @register="testModal"></CheckRuleTestModal>
-    <CheckRuleModal @register="registerModal" @success="reload"></CheckRuleModal>
+    <CheckRuleTestModal @register="testModal" />
+    <CheckRuleModal @register="registerModal" @success="reload" />
   </div>
 </template>
 

@@ -1,12 +1,8 @@
 <!--角色选择组件-->
 <template>
   <div>
-    <JSelectBiz @handleOpen="handleOpen" :loading="loadingEcho" v-bind="attrs"></JSelectBiz>
-    <RoleSelectModal
-      @register="regModal"
-      @getSelectResult="setValue"
-      v-bind="getBindValue"
-    ></RoleSelectModal>
+    <JSelectBiz @handleOpen="handleOpen" :loading="loadingEcho" v-bind="attrs" />
+    <RoleSelectModal @register="regModal" @getSelectResult="setValue" v-bind="getBindValue" />
   </div>
 </template>
 <script lang="ts">

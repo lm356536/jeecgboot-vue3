@@ -13,7 +13,7 @@
               </a-radio-group>
             </a-col>
           </a-row>
-          <Bar :chartData="dataSource" height="50vh"></Bar>
+          <Bar :chartData="dataSource" height="50vh" />
         </a-tab-pane>
         <a-tab-pane key="pie" tab="饼状图" force-render>
           <a-row :gutter="24">
@@ -25,7 +25,7 @@
                 <a-radio-button value="cabinet">按柜号统计</a-radio-button>
               </a-radio-group>
             </a-col>
-            <Pie :chartData="dataSource" height="40vh"></Pie>
+            <Pie :chartData="dataSource" height="40vh" />
           </a-row>
         </a-tab-pane>
       </a-tabs>

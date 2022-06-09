@@ -40,11 +40,11 @@ export function useModal(): UseModalReturnType {
     }
     uid.value = uuid;
     isProdMode() &&
-    onUnmounted(() => {
-      modal.value = null;
-      loaded.value = false;
-      dataTransfer[unref(uid)] = null;
-    });
+      onUnmounted(() => {
+        modal.value = null;
+        loaded.value = false;
+        dataTransfer[unref(uid)] = null;
+      });
     if (unref(loaded) && isProdMode() && modalMethod === unref(modal)) return;
 
     modal.value = modalMethod;
@@ -115,9 +115,9 @@ export const useModalInner = (callbackFn?: Fn): UseModalInnerReturnType => {
 
   const register = (modalInstance: ModalMethods, uuid: string) => {
     isProdMode() &&
-    tryOnUnmounted(() => {
-      modalInstanceRef.value = null;
-    });
+      tryOnUnmounted(() => {
+        modalInstanceRef.value = null;
+      });
     uidRef.value = uuid;
     modalInstanceRef.value = modalInstance;
     currentInstance?.emit('register', modalInstance, uuid);

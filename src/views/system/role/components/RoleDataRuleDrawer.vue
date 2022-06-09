@@ -17,7 +17,7 @@
             <a-col :span="24">
               <div style="width: 100%; margin-top: 15px">
                 <a-button @click="saveDataRuleForRole" type="primary" size="small">
-                  <Icon icon="ant-design:save-outlined"></Icon>点击保存</a-button
+                  <Icon icon="ant-design:save-outlined" />点击保存</a-button
                 >
               </div>
             </a-col>

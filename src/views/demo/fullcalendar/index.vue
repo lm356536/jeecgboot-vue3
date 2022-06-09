@@ -114,7 +114,7 @@
     </div>
     <div class="demo-app-main">
       <FullCalendar class="demo-app-calendar" :options="calendarOptions">
-        <template v-slot:eventContent="arg">
+        <template #eventContent="arg">
           <b>{{ arg.timeText }}</b>
           <i>{{ arg.event.title }}</i>
         </template>

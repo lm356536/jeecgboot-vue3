@@ -13,14 +13,14 @@ export interface UseEventParams {
   wait?: number;
 }
 export function useEventListener({
-                                   el = window,
-                                   name,
-                                   listener,
-                                   options,
-                                   autoRemove = true,
-                                   isDebounce = true,
-                                   wait = 80,
-                                 }: UseEventParams): { removeEvent: RemoveEventFn } {
+  el = window,
+  name,
+  listener,
+  options,
+  autoRemove = true,
+  isDebounce = true,
+  wait = 80,
+}: UseEventParams): { removeEvent: RemoveEventFn } {
   /* eslint-disable-next-line */
   let remove: RemoveEventFn = () => {};
   const isAddRef = ref(false);
@@ -37,16 +37,16 @@ export function useEventListener({
     const addEventListener = (e: Element) => e.addEventListener(name, realHandler, options);
 
     const removeWatch = watch(
-        element,
-        (v, _ov, cleanUp) => {
-          if (v) {
-            !unref(isAddRef) && addEventListener(v);
-            cleanUp(() => {
-              autoRemove && removeEventListener(v);
-            });
-          }
-        },
-        { immediate: true }
+      element,
+      (v, _ov, cleanUp) => {
+        if (v) {
+          !unref(isAddRef) && addEventListener(v);
+          cleanUp(() => {
+            autoRemove && removeEventListener(v);
+          });
+        }
+      },
+      { immediate: true },
     );
 
     remove = () => {

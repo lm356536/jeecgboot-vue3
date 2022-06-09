@@ -46,7 +46,7 @@
           class="fix-auto-fill"
         >
           <template #prefix>
-            <Icon icon="ant-design:mobile-outlined" :style="{ color: 'rgba(0,0,0,.25)' }"></Icon>
+            <Icon icon="ant-design:mobile-outlined" :style="{ color: 'rgba(0,0,0,.25)' }" />
           </template>
         </a-input>
       </FormItem>
@@ -59,7 +59,7 @@
           :sendCodeApi="sendCodeApi"
         >
           <template #prefix>
-            <Icon icon="ant-design:mail-outlined" :style="{ color: 'rgba(0,0,0,.25)' }"></Icon>
+            <Icon icon="ant-design:mail-outlined" :style="{ color: 'rgba(0,0,0,.25)' }" />
           </template>
         </CountdownInput>
       </FormItem>

@@ -20,15 +20,14 @@
           :columns="innerColumns"
           :dataSource="innerData"
           :pagination="false"
-        >
-        </BasicTable>
+        />
       </template>
       <!--操作栏-->
       <template #action="{ record }">
         <TableAction :actions="getTableAction(record)" />
       </template>
     </BasicTable>
-    <JVxeTableModal @register="registerModal" @success="reload()"></JVxeTableModal>
+    <JVxeTableModal @register="registerModal" @success="reload()" />
   </a-card>
 </template>
 

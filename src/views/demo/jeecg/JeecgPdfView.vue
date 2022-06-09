@@ -8,8 +8,7 @@
           :defaultExpandAll="true"
           @select="onSelect"
           style="height: 500px; overflow-y: auto"
-        >
-        </a-tree>
+        />
       </a-col>
       <!--右侧缩略图-->
       <a-col :span="18">

@@ -47,18 +47,18 @@ import JPopup from './jeecg/components/JPopup.vue';
 import JSwitch from './jeecg/components/JSwitch.vue';
 import JTreeDict from './jeecg/components/JTreeDict.vue';
 import JInputPop from './jeecg/components/JInputPop.vue';
-import { JEasyCron } from './jeecg/components/JEasyCron'
+import { JEasyCron } from './jeecg/components/JEasyCron';
 import JCheckbox from './jeecg/components/JCheckbox.vue';
 import JInput from './jeecg/components/JInput.vue';
 import JTreeSelect from './jeecg/components/JTreeSelect.vue';
 import JEllipsis from './jeecg/components/JEllipsis.vue';
 import JSelectUserByDept from './jeecg/components/JSelectUserByDept.vue';
-import JUpload from './jeecg/components/JUpload/JUpload.vue'
-import JSearchSelect from './jeecg/components/JSearchSelect.vue'
-import JAddInput from './jeecg/components/JAddInput.vue'
-import {Time} from '/@/components/Time';
-import JOnlineSelectCascade from './jeecg/components/JOnlineSelectCascade.vue'
-import JRangeNumber from './jeecg/components/JRangeNumber.vue'
+import JUpload from './jeecg/components/JUpload/JUpload.vue';
+import JSearchSelect from './jeecg/components/JSearchSelect.vue';
+import JAddInput from './jeecg/components/JAddInput.vue';
+import { Time } from '/@/components/Time';
+import JOnlineSelectCascade from './jeecg/components/JOnlineSelectCascade.vue';
+import JRangeNumber from './jeecg/components/JRangeNumber.vue';
 
 const componentMap = new Map<ComponentType, Component>();
 
@@ -125,8 +125,8 @@ componentMap.set('JSelectUserByDept', JSelectUserByDept);
 componentMap.set('JUpload', JUpload);
 componentMap.set('JSearchSelect', JSearchSelect);
 componentMap.set('JAddInput', JAddInput);
-componentMap.set('JOnlineSelectCascade', JOnlineSelectCascade)
-componentMap.set('JRangeNumber', JRangeNumber)
+componentMap.set('JOnlineSelectCascade', JOnlineSelectCascade);
+componentMap.set('JRangeNumber', JRangeNumber);
 
 export function add(compName: ComponentType, component: Component) {
   componentMap.set(compName, component);

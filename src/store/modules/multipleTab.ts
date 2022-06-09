@@ -34,7 +34,6 @@ const getToTarget = (tabItem: RouteLocationNormalized) => {
   };
 };
 
-
 const cacheTab = projectSetting.multiTabsSetting.cache;
 
 export const useMultipleTabStore = defineStore({

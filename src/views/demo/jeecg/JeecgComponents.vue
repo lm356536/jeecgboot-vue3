@@ -66,6 +66,7 @@
   import { BasicDragVerify } from '/@/components/Verify/index';
 
   export default defineComponent({
+    name: 'JeecgComponents',
     components: {
       BasicForm,
       ApiSelect,
@@ -77,7 +78,6 @@
       JEllipsis,
       BasicDragVerify,
     },
-    name: 'JeecgComponents',
     setup() {
       const { isDisabledAuth } = usePermission();
       const check = ref(null);

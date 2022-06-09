@@ -1,5 +1,5 @@
-import {dateUtil} from '/@/utils/dateUtil';
-import {duplicateCheck} from "/@/views/system/user/user.api";
+import { dateUtil } from '/@/utils/dateUtil';
+import { duplicateCheck } from '/@/views/system/user/user.api';
 
 export const rules = {
   rule(type, required) {
@@ -18,7 +18,12 @@ export const rules = {
           if (required == true && !value) {
             return Promise.reject('请输入邮箱!');
           }
-          if (value && !new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(value)) {
+          if (
+            value &&
+            !new RegExp(
+              /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+            ).test(value)
+          ) {
             return Promise.reject('请输入正确邮箱格式!');
           }
           return Promise.resolve();
@@ -42,7 +47,7 @@ export const rules = {
         },
         trigger: 'change',
       },
-    ]
+    ];
   },
   startTime(endTime, required) {
     return [
@@ -78,7 +83,7 @@ export const rules = {
       },
     ];
   },
-  confirmPassword(values,required){
+  confirmPassword(values, required) {
     return [
       {
         required: required ? required : false,
@@ -94,7 +99,7 @@ export const rules = {
       },
     ];
   },
-  duplicateCheckRule(tableName,fieldName,model,schema, required) {
+  duplicateCheckRule(tableName, fieldName, model, schema, required) {
     return [
       {
         required: required,
@@ -111,15 +116,13 @@ export const rules = {
             })
               .then((res) => {
                 res.success ? resolve() : reject(res.message || '校验失败');
-              }).catch((err) => {
-              reject(err.message || '验证失败');
-            });
+              })
+              .catch((err) => {
+                reject(err.message || '验证失败');
+              });
           });
         },
       },
     ] as ArrayRule;
   },
 };
-
-
-

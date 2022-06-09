@@ -60,8 +60,8 @@
         <a-tab-pane tab="存储监管" key="3">
           <a-row>
             <a-col :xl="16" :lg="12" :md="12" :sm="24" :xs="24" style="display: flex">
-              <Gauge :chartData="{ name: 'C盘', value: 70 }" height="30vh"></Gauge>
-              <Gauge :chartData="{ name: 'D盘', value: 50 }" height="30vh"></Gauge>
+              <Gauge :chartData="{ name: 'C盘', value: 70 }" height="30vh" />
+              <Gauge :chartData="{ name: 'D盘', value: 50 }" height="30vh" />
             </a-col>
             <a-col :xl="8" :lg="12" :md="12" :sm="24" :xs="24">
               <QuickNav

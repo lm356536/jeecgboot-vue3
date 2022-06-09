@@ -20,7 +20,7 @@
   import { dataRuleColumns, dataRuleSearchFormSchema } from './menu.data';
   import { dataRuleList, deleteRule } from './menu.api';
   import { ColEx } from '/@/components/Form/src/types';
-  import { useAdapt } from '/@/hooks/system/useAutoAdapt.ts';
+  import { useAdapt } from '/@/hooks/system/useAutoAdapt';
   const permissionId = ref('');
   const { width } = useAdapt({ def: '650px', xl: '650px', lg: '650px' });
   //权限规则model

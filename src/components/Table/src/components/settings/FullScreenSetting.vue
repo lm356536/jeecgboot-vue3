@@ -17,13 +17,13 @@
 
   export default defineComponent({
     name: 'FullScreenSetting',
-    props: {
-      isMobile: Boolean,
-    },
     components: {
       FullscreenExitOutlined,
       FullscreenOutlined,
       Tooltip,
+    },
+    props: {
+      isMobile: Boolean,
     },
 
     setup(props) {

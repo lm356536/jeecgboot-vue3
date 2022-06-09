@@ -6,7 +6,7 @@
   import { useECharts } from '/@/hooks/web/useECharts';
 
   export default defineComponent({
-    name: 'barMulti',
+    name: 'BarMulti',
     props: {
       chartData: {
         type: Array,

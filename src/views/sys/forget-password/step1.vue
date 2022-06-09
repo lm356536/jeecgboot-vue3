@@ -39,7 +39,7 @@
   import { phoneVerify, getCaptcha } from '/@/api/sys/user';
 
   export default defineComponent({
-    name: 'step1',
+    name: 'Step1',
     components: {
       Button,
       Form,

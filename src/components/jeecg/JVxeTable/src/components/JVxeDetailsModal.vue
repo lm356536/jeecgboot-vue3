@@ -9,7 +9,7 @@
   >
     <transition name="fade">
       <div v-if="getVisible">
-        <slot name="mainForm" :row="row" :column="column" />
+        <slot name="mainForm" :row="row" :column="column"></slot>
       </div>
     </transition>
   </BasicModal>

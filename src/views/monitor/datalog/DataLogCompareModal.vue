@@ -57,7 +57,7 @@
         </template>
         <template #avatarslot="{ record }">
           <div class="anty-img-wrap" v-if="record.dataVersion1 != record.dataVersion2">
-            <Icon icon="mdi:arrow-right-bold" style="color: red"></Icon>
+            <Icon icon="mdi:arrow-right-bold" style="color: red" />
           </div>
         </template>
       </BasicTable>

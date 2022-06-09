@@ -10,9 +10,9 @@
 
   export default defineComponent({
     name: 'JEditor',
+    components: { Tinymce },
     // 不将 attrs 的属性绑定到 html 标签上
     inheritAttrs: false,
-    components: { Tinymce },
     props: {
       value: propTypes.string.def(''),
       disabled: propTypes.bool.def(false),

@@ -36,22 +36,22 @@
           <template #overlay>
             <a-menu>
               <a-menu-item key="1" @click="batchHandleDelete">
-                <Icon icon="ant-design:delete-outlined"></Icon>
+                <Icon icon="ant-design:delete-outlined" />
                 删除
               </a-menu-item>
               <a-menu-item key="2" @click="batchFrozen(2)">
-                <Icon icon="ant-design:lock-outlined"></Icon>
+                <Icon icon="ant-design:lock-outlined" />
                 冻结
               </a-menu-item>
               <a-menu-item key="3" @click="batchFrozen(1)">
-                <Icon icon="ant-design:unlock-outlined"></Icon>
+                <Icon icon="ant-design:unlock-outlined" />
                 解冻
               </a-menu-item>
             </a-menu>
           </template>
           <a-button
             >批量操作
-            <Icon icon="mdi:chevron-down"></Icon>
+            <Icon icon="mdi:chevron-down" />
           </a-button>
         </a-dropdown>
       </template>

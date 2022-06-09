@@ -11,7 +11,7 @@
           @click="submitAction"
           v-if="showSubmitButton"
         >
-          <Icon icon="ant-design:search-outlined"></Icon>
+          <Icon icon="ant-design:search-outlined" />
           {{ getSubmitBtnOptions.text }}
         </Button>
 
@@ -23,7 +23,7 @@
           @click="resetAction"
           v-if="showResetButton"
         >
-          <Icon icon="ic:baseline-restart-alt"></Icon>
+          <Icon icon="ic:baseline-restart-alt" />
           {{ getResetBtnOptions.text }}
         </Button>
         <!-- update-end-author:zyf    Date:20211213  for：调换按钮前后位置-->

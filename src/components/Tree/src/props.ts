@@ -82,7 +82,7 @@ export const basicProps = {
   filterFn: {
     type: Function as PropType<
       (searchValue: any, node: TreeItem, replaceFields: ReplaceFields) => boolean
-      >,
+    >,
     default: null,
   },
   // 搜索完成时自动展开结果

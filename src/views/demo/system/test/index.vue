@@ -38,7 +38,7 @@
   import { columns, searchFormSchema } from './test.data';
 
   export default defineComponent({
-    name: 'system-test',
+    name: 'SystemTest',
     components: { BasicTable, TestDrawer, TableAction },
     setup() {
       const [registerDrawer, { openDrawer }] = useDrawer();

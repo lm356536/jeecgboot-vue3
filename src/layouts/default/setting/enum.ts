@@ -74,7 +74,7 @@ export const tabsThemeOptions = [
     value: TabsThemeEnum.SIMPLE,
     label: t('layout.setting.tabsThemeSimple'),
   },
-]
+];
 
 export const contentModeOptions = [
   {
