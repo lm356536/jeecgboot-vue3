@@ -93,6 +93,7 @@
    * 点击选中
    */
   function onCheck(o) {
+    console.log('onCheck', o);
     checkedKeys.value = o.checked ? o.checked : o;
   }
   /**
